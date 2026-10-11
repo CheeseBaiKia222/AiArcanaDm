@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1791694791405,
+      "tag": "0000_naive_mikhail_rasputin",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1791694792973,
+      "tag": "0001_revision_triggers",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1791694923004,
+      "tag": "0002_lonely_james_howlett",
+      "breakpoints": true
+    }
+  ]
+}

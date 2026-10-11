@@ -1,0 +1,1 @@
+export default function Home(){return <main><a href="/index.html">Open Parcarna</a></main>}
