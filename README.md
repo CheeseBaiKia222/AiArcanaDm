@@ -2,6 +2,8 @@
 
 Parcana is a free web prototype that connects tarot symbolism with self-expression, community sharing, and play. Six questions reveal a starting arcana, shape a profile, and give an explicit bonus in five-round Arcana Duels.
 
+This prototype was developed during the Common Ground makeathon sprint, under the **Culture × Tech** track. The repository captures the sprint's work: an exploration of tarot as a shared cultural language for self-expression, interpretation, and play. It remains a work in progress, with the current experience and limitations documented below.
+
 ## Cultural intent
 
 **Common Ground track: Culture × Tech**
