@@ -1,0 +1,42 @@
+/* Additions to existing cards and dialogs; the page shell and theme are unchanged. */
+.community-feed { margin-top:42px; padding-top:32px; border-top:1px solid var(--line); }
+.community-feed .section-heading h2 { font-size:34px; }
+.feed-arcana-label { margin-left:auto; display:flex; align-items:center; gap:8px; color:var(--muted); font-size:10px; }
+.feed-arcana-label select { max-width:205px; min-height:36px; background:var(--panel); color:var(--ink); border:1px solid var(--line); border-radius:5px; padding:5px 9px; font:inherit; }
+.post-arcana { display:flex; align-items:center; gap:8px; margin:11px 0; color:var(--lavender-ink); font-size:10px; line-height:1.5; }
+.post-arcana img { width:18px; height:29px; border-radius:2px; object-fit:cover; }
+.post-social { display:flex; gap:13px; border-top:1px solid var(--line); padding-top:6px; }
+.post-social button { display:inline-flex; align-items:center; justify-content:center; gap:6px; min-width:36px; min-height:34px; padding:5px; font-size:10px; color:var(--muted); }
+.post-social .icon { width:15px; height:15px; }
+.post-social button[aria-pressed=true] { color:var(--lavender-ink); }
+.post-social button:hover { color:var(--ink); }
+.post-social button[data-repost]>span:first-child { font-size:22px; line-height:1; }
+.repost-credit { font-size:10px; color:var(--muted); margin:0 0 9px; }
+.post-video { position:relative; background:#1c1824; width:100%; }
+.post-image .post-video { aspect-ratio:var(--aspect,1.1); }
+.post-video video { display:block; width:100%; height:100%; object-fit:contain; background:#16131c; }
+.post-image video { pointer-events:none; }
+.video-label { position:absolute; left:14px; bottom:14px; color:#f3edf8; background:#181320d9; border-radius:4px; padding:7px 10px; font-size:10px; letter-spacing:1px; }
+.detail-visual .post-video { align-self:center; }
+.detail-visual video { max-height:75vh; min-height:220px; }
+.detail-actions { flex-wrap:wrap; }
+.detail-copy .post-arcana { margin:20px 0 8px; font-size:12px; }
+.detail-copy .post-arcana img { width:23px; height:38px; }
+.post-arcana-note { font-size:11px; color:var(--muted); line-height:1.7; }
+.activity-signals { border-top:1px solid var(--line); padding-top:15px; margin:5px 0 15px; }
+.activity-signals .eyebrow { font-size:8px; letter-spacing:1.1px; }
+.activity-signals p { font-size:10px; line-height:1.6; margin-top:8px; }
+.activity-signals .pill-row { margin:10px 0 0; }
+.activity-signals .chip { font-size:9px; }
+.arcana-suggestion { color:var(--lavender-ink); font-size:12px; line-height:1.7; margin-bottom:8px; }
+#upload-status { overflow-wrap:anywhere; }
+@media(max-width:700px) {
+  .community-feed .section-heading { gap:20px; }
+  .community-feed .filter-line { flex-wrap:wrap; overflow:visible; gap:5px; }
+  .community-feed .filter { padding:8px 11px; }
+  .feed-arcana-label { width:100%; margin:9px 0 0; }
+  .feed-arcana-label select { flex:1; max-width:none; }
+  .post-social { gap:5px; justify-content:space-between; }
+  .post-social button { min-width:30px; }
+  .post-arcana { font-size:9px; gap:6px; }
+}

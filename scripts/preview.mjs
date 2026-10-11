@@ -1,0 +1,14 @@
+import {migratePreview} from './migrate-preview.mjs';
+import './sites-env.mjs';
+import {Miniflare} from 'miniflare';
+import {readFileSync,readdirSync,cpSync,mkdirSync} from 'node:fs';
+const profile=process.env.PARCARNA_PREVIEW_PROFILE||'preview';
+if(!/^[a-z0-9-]+$/.test(profile))throw Error('Use a simple preview profile name.');
+const preview='.sites-runtime/'+profile+'-dist';mkdirSync(preview,{recursive:true});cpSync('dist',preview,{recursive:true});
+const paths=readdirSync('dist/server',{recursive:true}).filter(f=>String(f).endsWith('.js')).sort((a,b)=>a==='index.js'?-1:b==='index.js'?1:0);
+const mf=new Miniflare({modules:paths.map(p=>({type:'ESModule',path:preview+'/server/'+p})),modulesRoot:preview+'/server',compatibilityDate:'2026-05-15',compatibilityFlags:['nodejs_compat'],d1Databases:['DB'],d1Persist:'.wrangler/'+profile+'/d1',r2Buckets:['BUCKET'],r2Persist:'.wrangler/'+profile+'/r2',assets:{directory:preview+'/client',binding:'ASSETS',routerConfig:{has_user_worker:true}},host:'127.0.0.1',port:Number(process.env.PARCARNA_PREVIEW_PORT||4319),inspectorPort:0});
+const db=await mf.getD1Database('DB');
+await migratePreview(db);
+console.log('Parcarna persistent preview: '+await mf.ready);
+await new Promise(resolve=>{process.once('SIGINT',resolve);process.once('SIGTERM',resolve)});
+await mf.dispose();

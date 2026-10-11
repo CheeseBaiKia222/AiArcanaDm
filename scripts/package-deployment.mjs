@@ -1,0 +1,16 @@
+import {existsSync,readFileSync,mkdirSync,statSync} from 'node:fs';
+import {resolve,dirname} from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {spawnSync} from 'node:child_process';
+const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
+const archive=resolve(process.argv[2]||resolve(root,'deployment/parcarna-deploy.tar.gz'));
+const dist=resolve(root,'dist');
+for(const file of ['.openai/hosting.json','server/index.js','client/index.html'])if(!existsSync(resolve(dist,file)))throw Error('Missing build output: '+file+'; build the Site first.');
+const source=JSON.parse(readFileSync(resolve(root,'.openai/hosting.json'),'utf8'));
+const built=JSON.parse(readFileSync(resolve(dist,'.openai/hosting.json'),'utf8'));
+if(JSON.stringify(source)!==JSON.stringify(built))throw Error('Hosting manifest changed; rebuild before packaging.');
+mkdirSync(dirname(archive),{recursive:true});
+const result=spawnSync('tar',['-czf',archive,'-C',dist,'.'],{stdio:'inherit'});
+if(result.error)throw result.error;
+if(result.status!==0)process.exit(result.status||1);
+console.log(JSON.stringify({archive,bytes:statSync(archive).size,project_id:source.project_id}));
