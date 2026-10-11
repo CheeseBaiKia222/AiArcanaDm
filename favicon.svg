@@ -1,1 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><rect width="40" height="40" rx="10" fill="#f8f6f1"/><path d="M7 7h12v12H7zM22 7h12v12H22zM7 22h12v12H7zM22 22h12v12H22z" fill="#513c56"/><path d="M22 7a12 12 0 0112 12H22z" fill="#bca3c9"/><circle cx="13" cy="28" r="6" fill="#b8c3a5"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+<title>Parcarna night mask</title>
+<defs><linearGradient id="shell" x1="13" y1="8" x2="52" y2="57" gradientUnits="userSpaceOnUse"><stop stop-color="#34303f"/><stop offset=".48" stop-color="#11121d"/><stop offset="1" stop-color="#060913"/></linearGradient><linearGradient id="edge" x1="9" y1="14" x2="56" y2="48" gradientUnits="userSpaceOnUse"><stop stop-color="#a49aaa"/><stop offset=".45" stop-color="#494454"/><stop offset="1" stop-color="#a73550"/></linearGradient></defs>
+<path d="M32 5 46 10 56 20 53 39 44 52 32 60 20 52 11 39 8 20 18 10Z" fill="url(#shell)" stroke="url(#edge)" stroke-width="1.5" stroke-linejoin="round"/>
+<path d="m18 12 7 14 7-6 7 6 7-14M12 38l11 8 9-5 9 5 11-8" stroke="#686070" stroke-opacity=".55" stroke-linejoin="round"/>
+<path d="m13 25 14 5-5 5-7-3Z" fill="#db3659"/>
+<path d="m51 25-14 5 5 5 7-3Z" fill="#db3659"/>
+<path d="m15 26 11 4-4 1Zm34 0-11 4 4 1Z" fill="#ff8a9f"/>
+<path d="m32 25-5 15 5-3 5 3Z" fill="#827582" fill-opacity=".55"/>
+<path d="m25 49 7-3 7 3M28 53l4 2 4-2" stroke="#a36b80" stroke-width="1.5" stroke-linecap="round"/>
+<path d="m48 37-4 6" stroke="#aa294b" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

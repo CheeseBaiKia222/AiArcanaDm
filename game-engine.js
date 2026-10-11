@@ -1,4 +1,4 @@
-/** Mosaic's fictional Arcana Duels. All illustrations are original vector art. */
+/** Parcarna's fictional Arcana Duels. All illustrations are original vector art. */
 export const ATTRIBUTES = Object.freeze(['imagination', 'courage', 'insight', 'imagination', 'courage']);
 export const ATTRIBUTE_LABELS = Object.freeze({imagination:'Imagination', courage:'Courage', insight:'Insight'});
 const definitions = [

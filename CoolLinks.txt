@@ -1,1 +1,12 @@
 https://thisisshaw-04.github.io/Common-Ground-Makeathon/#access
+
+1) Change Logos as well 
+2) Reduce AI SLOP
+3) Different name (Parcarna)
+4) Hosting link using sites
+5) Different Layout, colours, and background based on the PDF
+6) Upload images of actual tarot cards using the Rider-Waite-Smith deck
+7) Questionnaire to showcase who you are, what arcana you are. Depending on what arcana you are, u gain bonuses in the games
+8) Landing page --> Account Creation --> Persona creation --> Home page   (each user has a username, password)
+9) Mystique, nightclubby, Melancholic Vibe. 
+10) Matching personas and vibes {with images n shit}, The vibes are created from the personality test {basically just make one female and male personality}

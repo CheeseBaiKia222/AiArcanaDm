@@ -9,7 +9,7 @@ const state=()=>typeof ctx.state==='function'?ctx.state():ctx.state;
 const mine=()=>ctx.me().id;
 const participants=conversation=>conversation.participants||conversation.participantIds||[];
 const otherId=conversation=>participants(conversation).find(id=>id!==mine());
-const other=conversation=>ctx.profile(otherId(conversation))||{id:otherId(conversation),name:'Mosaic member',username:'member',bio:'',interests:[]};
+const other=conversation=>ctx.profile(otherId(conversation))||{id:otherId(conversation),name:'Parcarna member',username:'member',bio:'',interests:[]};
 const status=conversation=>conversation.status||(conversation.accepted?'accepted':'pending');
 const incoming=conversation=>status(conversation)==='pending'&&conversation.requestedBy!==mine();
 const getSelected=()=>ctx.getConversationId?.()||null;

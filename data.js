@@ -1,7 +1,7 @@
-// Mosaic's fictional, browser-local demo world. Never merge these IDs into real accounts.
+// Parcarna's fictional, browser-local demo world. Never merge these IDs into real accounts.
 const photo = (id, w = 900) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=85`;
 const art = name => `/assets/${name}.svg`;
-const original = { name: 'Original Mosaic demo artwork', url: '/ASSET-SOURCES.md', license: 'Original SVG artwork created for Mosaic' };
+const original = { name: 'Original Parcarna demo artwork', url: '/ASSET-SOURCES.md', license: 'Original SVG artwork created for Parcarna' };
 const sourced = id => ({ name: 'Unsplash · curated inspiration', url: `https://images.unsplash.com/photo-${id}`, license: 'Unsplash License · https://unsplash.com/license' });
 const defaults = { visibility: 'public', messagePolicy: 'everyone', invitePolicy: 'everyone', sections: ['projects', 'boards', 'posts'], fictional: true, links: [] };
 

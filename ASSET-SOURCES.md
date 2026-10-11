@@ -1,10 +1,10 @@
-# Mosaic demo image sources
+# Parcarna demo image sources
 
-Mosaic is a standalone product with its own original artwork and fictional demo identities.
+Parcarna is a standalone product with its own original artwork and fictional demo identities.
 
 ## Original artwork
 
-The following SVG illustrations were created specifically for this Mosaic demo as original vector artwork. They do not reproduce existing tarot illustrations, logos, or artists' work. Editable, reproducible source is `assets/generate-assets.mjs`.
+The following SVG illustrations were created specifically for this Parcarna demo as original vector artwork. They do not reproduce existing tarot illustrations, logos, or artists' work. Editable, reproducible source is `assets/generate-assets.mjs`.
 
 - `wonder-poster.svg`: typographic lavender poster, “Make room for wonder.”
 - `botanical-study.svg`: sage botanical specimen print.
